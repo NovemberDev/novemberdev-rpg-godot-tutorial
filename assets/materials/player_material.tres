@@ -1,0 +1,39 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=2]
+
+[sub_resource type="Shader" id=19]
+code = "shader_type canvas_item;
+
+uniform vec2 scale;
+uniform sampler2D noise;
+uniform vec2 distortion_scale;
+uniform vec4 ghost_color : hint_color;
+uniform float intensity;
+uniform float speed;
+uniform float health;
+
+void fragment() {
+	if(health > 0.0) {
+		COLOR = texture(TEXTURE, UV);
+	} else {
+		float distortion = texture(noise, SCREEN_UV*scale*distortion_scale + TIME*speed).x;
+		distortion -= 0.5;
+		COLOR = texture(TEXTURE, UV - distortion * (intensity * UV.y)) * ghost_color;
+	}
+}"
+custom_defines = ""
+
+[sub_resource type="OpenSimplexNoise" id=20]
+
+[sub_resource type="NoiseTexture" id=21]
+seamless = true
+noise = SubResource( 20 )
+
+[resource]
+shader = SubResource( 19 )
+shader_param/scale = Vector2( 1, 1 )
+shader_param/distortion_scale = Vector2( 1, 1 )
+shader_param/ghost_color = Color( 0.4, 1, 0.505882, 0.784314 )
+shader_param/intensity = 0.06
+shader_param/speed = 0.1
+shader_param/health = 100.0
+shader_param/noise = SubResource( 21 )
