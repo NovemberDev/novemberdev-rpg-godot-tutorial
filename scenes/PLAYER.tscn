@@ -1617,7 +1617,7 @@ tracks/8/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=44]
+[sub_resource type="Animation" id=16]
 resource_name = "walk_front (copy)"
 loop = true
 step = 0.25
@@ -1717,7 +1717,7 @@ tracks/6/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -1840,7 +1840,7 @@ tracks/8/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=18]
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -1963,139 +1963,139 @@ tracks/8/keys = {
 } ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "damage"
-
-[sub_resource type="AnimationNodeOneShot" id=19]
-fadein_time = 0.0
 
 [sub_resource type="AnimationNodeOneShot" id=20]
 fadein_time = 0.0
+
+[sub_resource type="AnimationNodeOneShot" id=21]
+fadein_time = 0.0
 fadeout_time = 0.0
 
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=22]
 animation = "stab_back_left"
 
-[sub_resource type="AnimationNodeAnimation" id=22]
+[sub_resource type="AnimationNodeAnimation" id=23]
 animation = "stab_back_right"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
+[sub_resource type="AnimationNodeAnimation" id=24]
 animation = "stab_front_right"
 
-[sub_resource type="AnimationNodeAnimation" id=24]
+[sub_resource type="AnimationNodeAnimation" id=25]
 animation = "stab_front_left"
 
-[sub_resource type="AnimationNodeAnimation" id=25]
+[sub_resource type="AnimationNodeAnimation" id=26]
 animation = "stab_side_left_left"
 
-[sub_resource type="AnimationNodeAnimation" id=26]
+[sub_resource type="AnimationNodeAnimation" id=27]
 animation = "stab_side_right_right"
 
-[sub_resource type="AnimationNodeAnimation" id=27]
+[sub_resource type="AnimationNodeAnimation" id=28]
 animation = "stab_side_right_left"
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "stab_side_left_right"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=29]
-blend_point_0/node = SubResource( 21 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=30]
+blend_point_0/node = SubResource( 22 )
 blend_point_0/pos = Vector2( -1, 1 )
-blend_point_1/node = SubResource( 22 )
+blend_point_1/node = SubResource( 23 )
 blend_point_1/pos = Vector2( 1, 1 )
-blend_point_2/node = SubResource( 23 )
+blend_point_2/node = SubResource( 24 )
 blend_point_2/pos = Vector2( 1, -1 )
-blend_point_3/node = SubResource( 24 )
+blend_point_3/node = SubResource( 25 )
 blend_point_3/pos = Vector2( -1, -1 )
-blend_point_4/node = SubResource( 25 )
+blend_point_4/node = SubResource( 26 )
 blend_point_4/pos = Vector2( -3, 0 )
-blend_point_5/node = SubResource( 26 )
+blend_point_5/node = SubResource( 27 )
 blend_point_5/pos = Vector2( 3, 0 )
-blend_point_6/node = SubResource( 27 )
+blend_point_6/node = SubResource( 28 )
 blend_point_6/pos = Vector2( 1, 0 )
-blend_point_7/node = SubResource( 28 )
+blend_point_7/node = SubResource( 29 )
 blend_point_7/pos = Vector2( -1, 0 )
 min_space = Vector2( -3, -1 )
 max_space = Vector2( 3, 1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=31]
 animation = "idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
+[sub_resource type="AnimationNodeAnimation" id=32]
 animation = "idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id=32]
+[sub_resource type="AnimationNodeAnimation" id=33]
 animation = "idle_back"
 
-[sub_resource type="AnimationNodeAnimation" id=33]
+[sub_resource type="AnimationNodeAnimation" id=34]
 animation = "idle_front"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=34]
-blend_point_0/node = SubResource( 30 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=35]
+blend_point_0/node = SubResource( 31 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 31 )
+blend_point_1/node = SubResource( 32 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 32 )
+blend_point_2/node = SubResource( 33 )
 blend_point_2/pos = Vector2( 0, 1 )
-blend_point_3/node = SubResource( 33 )
+blend_point_3/node = SubResource( 34 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 1, 1 )
 blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id=35]
-animation = "walk_left"
 
 [sub_resource type="AnimationNodeAnimation" id=36]
-animation = "walk_right"
+animation = "walk_left"
 
 [sub_resource type="AnimationNodeAnimation" id=37]
-animation = "walk_back"
+animation = "walk_right"
 
 [sub_resource type="AnimationNodeAnimation" id=38]
+animation = "walk_back"
+
+[sub_resource type="AnimationNodeAnimation" id=39]
 animation = "walk_front"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=39]
-blend_point_0/node = SubResource( 35 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=40]
+blend_point_0/node = SubResource( 36 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 36 )
+blend_point_1/node = SubResource( 37 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 37 )
+blend_point_2/node = SubResource( 38 )
 blend_point_2/pos = Vector2( 0, 1 )
-blend_point_3/node = SubResource( 38 )
+blend_point_3/node = SubResource( 39 )
 blend_point_3/pos = Vector2( 0, -1 )
 snap = Vector2( 1, 1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeTransition" id=40]
+[sub_resource type="AnimationNodeTransition" id=41]
 input_count = 2
 input_0/name = "idle"
 input_0/auto_advance = false
 input_1/name = "move"
 input_1/auto_advance = false
 
-[sub_resource type="AnimationNodeBlendTree" id=41]
+[sub_resource type="AnimationNodeBlendTree" id=42]
 graph_offset = Vector2( -595, 11 )
-nodes/Animation/node = SubResource( 18 )
+nodes/Animation/node = SubResource( 19 )
 nodes/Animation/position = Vector2( 40, 340 )
-nodes/action_os/node = SubResource( 19 )
+nodes/action_os/node = SubResource( 20 )
 nodes/action_os/position = Vector2( 240, 100 )
-nodes/attack/node = SubResource( 20 )
+nodes/attack/node = SubResource( 21 )
 nodes/attack/position = Vector2( 0, 140 )
-nodes/attack_bs/node = SubResource( 29 )
+nodes/attack_bs/node = SubResource( 30 )
 nodes/attack_bs/position = Vector2( -220, 320 )
-nodes/idle/node = SubResource( 34 )
+nodes/idle/node = SubResource( 35 )
 nodes/idle/position = Vector2( -480, 80 )
-nodes/move/node = SubResource( 39 )
+nodes/move/node = SubResource( 40 )
 nodes/move/position = Vector2( -500, 300 )
 nodes/output/position = Vector2( 500, 100 )
-nodes/state/node = SubResource( 40 )
+nodes/state/node = SubResource( 41 )
 nodes/state/position = Vector2( -200, 140 )
-node_connections = [ "output", 0, "action_os", "state", 0, "idle", "state", 1, "move", "attack", 0, "state", "attack", 1, "attack_bs", "action_os", 0, "attack", "action_os", 1, "Animation" ]
-
-[sub_resource type="CircleShape2D" id=42]
-radius = 17.0294
+node_connections = [ "state", 0, "idle", "state", 1, "move", "output", 0, "action_os", "attack", 0, "state", "attack", 1, "attack_bs", "action_os", 0, "attack", "action_os", 1, "Animation" ]
 
 [sub_resource type="CircleShape2D" id=43]
+radius = 17.0294
+
+[sub_resource type="CircleShape2D" id=44]
 radius = 11.4696
 
 [node name="PLAYER" type="KinematicBody2D" groups=[
@@ -2132,18 +2132,18 @@ anims/stab_side_right_left = SubResource( 12 )
 anims/stab_side_right_right = SubResource( 13 )
 anims/walk_back = SubResource( 14 )
 anims/walk_front = SubResource( 15 )
-"anims/walk_front (copy)" = SubResource( 44 )
-anims/walk_left = SubResource( 16 )
-anims/walk_right = SubResource( 17 )
+"anims/walk_front (copy)" = SubResource( 16 )
+anims/walk_left = SubResource( 17 )
+anims/walk_right = SubResource( 18 )
 
 [node name="Sprite" type="Sprite" parent="MODEL"]
 texture = ExtResource( 3 )
 flip_h = true
 hframes = 20
-frame = 6
+frame = 5
 
 [node name="AnimationTree" type="AnimationTree" parent="MODEL"]
-tree_root = SubResource( 41 )
+tree_root = SubResource( 42 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/action_os/active = false
@@ -2158,7 +2158,7 @@ visible = false
 texture = ExtResource( 4 )
 flip_h = true
 hframes = 20
-frame = 6
+frame = 5
 
 [node name="RIGHTHAND" type="Sprite" parent="MODEL"]
 visible = false
@@ -2166,7 +2166,7 @@ z_index = -1
 texture = ExtResource( 4 )
 flip_h = true
 hframes = 20
-frame = 6
+frame = 7
 
 [node name="FX" parent="MODEL" instance=ExtResource( 1 )]
 
@@ -2187,7 +2187,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractSensor"]
-shape = SubResource( 42 )
+shape = SubResource( 43 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 43 )
+shape = SubResource( 44 )
