@@ -12,6 +12,7 @@ signal on_item_ingest
 signal on_world_state_changed
 
 func _ready():
+	GLOBALS.connect("on_delete_save", self, "on_delete_save")
 	connect("on_world_state_changed", self, "on_world_state_changed")
 	connect("on_item_ingest", self, "on_item_ingest")
 	connect("on_item_pickup", self, "on_item_pickup")
@@ -84,6 +85,16 @@ func try_get_value(source, key, val):
 		return source[key]
 	return val
 
+func on_delete_save():
+	health = 50
+	inventory = {}
+	world_state = {}
+	left_hand_item_name = null
+	right_hand_item_name = null
+	var dir = Directory.new()
+	dir.remove("user://save.json")
+	get_tree().reload_current_scene()
+
 enum StateType {
 	Removed = 0,
 	Added = 1
@@ -111,5 +122,4 @@ var item_db = {
 		price = 5
 	}
 }
-
 

@@ -15,6 +15,7 @@ func _ready():
 	$INVENTORY/DROP.connect("confirmed", self, "on_drop_confirmed")
 	$INVENTORY/DROP/BODY/COUNT.connect("value_changed", self, "on_drop_count_changed")
 	$INVENTORY/DESCRIPTION/ITEM/EQUIPPED.connect("item_selected", self, "on_equip")
+	$DELETE_SAVE.connect("pressed", self, "on_delete_save")
 	on_refresh_ui()
 	
 func on_toggle_ui():
@@ -120,3 +121,5 @@ func reset_inventory():
 			n.visible = false
 			n.queue_free()
 	
+func on_delete_save():
+	GLOBALS.emit_signal("on_delete_save")

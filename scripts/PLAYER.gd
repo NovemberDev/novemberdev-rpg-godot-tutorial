@@ -27,12 +27,19 @@ func _process(delta):
 	else:
 		linear_velocity = lerp(linear_velocity, Vector2.ZERO, delta * FRICTION)
 		$MODEL/AnimationTree.set("parameters/state/current", 0)
-	
-	move_and_slide(linear_velocity + current_knockback)
+		
 	$MODEL/AnimationTree.set("parameters/move/blend_position", current_orientation)
 	$MODEL/AnimationTree.set("parameters/idle/blend_position", current_orientation)
 	
+	move_and_slide(linear_velocity + current_knockback)
+	
 	if Input.is_action_just_pressed("attack") and is_weapon_equipped():
+		if $MODEL/LEFTHAND.visible:
+			var d = current_orientation * Vector2(2.0, 1.0) - Vector2(float($MODEL/LEFTHAND.visible), 0)
+			$MODEL/AnimationTree.set("parameters/attack_bs/blend_position", d)
+		if $MODEL/RIGHTHAND.visible:
+			var d = current_orientation * Vector2(2.0, 1.0) + Vector2(float($MODEL/RIGHTHAND.visible), 0)
+			$MODEL/AnimationTree.set("parameters/attack_bs/blend_position", d)
 		$MODEL/AnimationTree.set("parameters/attack/active", true)
 	if Input.is_action_just_pressed("interact"):
 		for body in $InteractSensor.get_overlapping_bodies():
